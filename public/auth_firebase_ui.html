@@ -5,19 +5,14 @@
     <meta charset="UTF-8">
     <title>Sample FirebaseUI App</title>
 
-    <!-- TODO firebase SDK 링크 
-    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
-    <script src="/fireinit.js"></script>
-    -->
+    <!-- TODO firebase SDK 링크 -->
 
     <!-- firebase ui 링크 -->
     <script src="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.css" />
     <script type="text/javascript">
       var uiConfig = {
-        'signInSuccessUrl': '/auth_google.html', // 인증 성공시 이동할 URL
+        'signInSuccessUrl': '<url-to-redirect-to-on-success>', // TODO 인증 성공시 이동할 URL
         'signInOptions': [
           // 사용할 인증 방법 선택하기
           firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -26,7 +21,7 @@
           firebase.auth.GithubAuthProvider.PROVIDER_ID,
           firebase.auth.EmailAuthProvider.PROVIDER_ID
         ],
-        'tosUrl': '/auth_term.html', // 이용약관 URL
+        'tosUrl': '<your-tos-url>', // TODO 이용약관 URL
       };
       var ui = new firebaseui.auth.AuthUI(firebase.auth());
       ui.start('#firebaseui-auth-container', uiConfig);
